@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="recipeApp">
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+	  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+		<script src="app/app.js"></script>
+    <link rel="stylesheet" type="text/css" href="content/css/styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <div ng-controller="recipeFormController">
+        <h3>Add an ingredient</h3>
+        <form ng-submit='addIngredient(ingredient)'>
+          <input type="text" placeholder="Add an Ingredient" ng-model="ingredient"/>
+          <div class="add" ng-click='addIngredient(ingredient)'>Click to add an ingredient</div>
+        </form>
+        <h3>Ingredients:</h3>
+        <div ng-repeat="i in ingredients">
+          <p id="ingredientList">- {{i.ingredient}}</p>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

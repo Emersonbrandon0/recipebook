@@ -1,0 +1,21 @@
+.add{
+  float: right;
+  background: #fff;
+  text-align: center;
+  color: crimson;
+  cursor: pointer;
+  font-weight: 200;
+  font-size: 45px;
+}
+h3{
+  font-size: 55px;
+  font-weight: 300;
+}
+#ingredientList{
+  font-size: 35px;
+  font-weight: 100;
+}
+
+.container{
+  width: 90% !important;
+}
