@@ -13,6 +13,7 @@
   padding: 0px 20px 0px 20px;
   border-radius: 6px;
   border: 1px solid crimson;
+  margin-bottom: 40px;
 }
 h3{
   font-size: 45px;
@@ -24,7 +25,7 @@ h3{
 }
 
 .container{
-  width: 70% !important;
+  width: 60% !important;
 }
 #menu-bar{
   background: crimson;
@@ -39,4 +40,15 @@ h3{
 }
 .directionsArea{
   margin-bottom: 300px;
+}
+.welcome{
+  text-align: center;
+  font-weight: 100;
+  margin-bottom:40px;
+}
+.recipeName{
+  text-align: center;
+  font-size: 60px;
+  font-style: italic;
+  font-weight: 200;
 }

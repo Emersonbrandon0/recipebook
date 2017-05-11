@@ -1,6 +1,23 @@
-var recipeApp = angular.module('recipeApp',[]);
+var recipeApp = angular.module('recipeApp',['ngRoute']);
 
-recipeApp.controller('recipeFormController',['$scope',function($scope){
+recipeApp.config(['$routeProvider',function($routeProvider){
+  $routeProvider
+    .when('/addRecipe',{
+      templateUrl:"views/addRecipe.html",
+      controller:"recipeFormController"
+    })
+    .when('/',{
+      templateUrl:"views/home.html",
+    })
+    .when('/yourRecipes',{
+      templateUrl:"views/yourRecipes.html",
+    })
+    .otherwise({
+      redirectTo:'/'
+    });
+}]);
+
+recipeApp.controller('recipeFormController',['$scope','$location',function($scope,$location){
   $scope.ingredients=[];
   $scope.addIngredient=function(ingredient){
     if(ingredient===undefined){
@@ -27,5 +44,22 @@ recipeApp.controller('recipeFormController',['$scope',function($scope){
     );
     $scope.direction='';
     $scope.direction=undefined;
+  }
+
+  $scope.recipes=[];
+  $scope.createRecipe=function() {
+    $scope.recipes.push({
+      name:$scope.recipeName,
+      ingredients:$scope.ingredients,
+      directions:$scope.directions
+    });
+    alert($scope.recipeName)
+    console.log($scope.recipes);
+    $location.path('/yourRecipes');
+  };
+
+  $scope.create="Create A New Recipe";
+  $scope.hideHeader=function(){
+    $scope.create="";
   }
 }]);
