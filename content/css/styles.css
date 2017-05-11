@@ -1,3 +1,7 @@
+*{
+  padding: 0px;
+  margin:0px;
+}
 .add{
   float: right;
   background: #fff;
@@ -5,17 +9,34 @@
   color: crimson;
   cursor: pointer;
   font-weight: 200;
-  font-size: 45px;
+  font-size: 35px;
+  padding: 0px 20px 0px 20px;
+  border-radius: 6px;
+  border: 1px solid crimson;
 }
 h3{
-  font-size: 55px;
+  font-size: 45px;
   font-weight: 300;
 }
-#ingredientList{
-  font-size: 35px;
+.list{
+  font-size: 25px;
   font-weight: 100;
 }
 
 .container{
-  width: 90% !important;
+  width: 70% !important;
+}
+#menu-bar{
+  background: crimson;
+  color: #fff;
+  padding: 20px;
+}
+#menu-bar a{
+  float: right;
+  list-style-type: none;
+  padding: 20px;
+  color: #fff;
+}
+.directionsArea{
+  margin-bottom: 300px;
 }
