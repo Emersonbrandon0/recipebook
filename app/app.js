@@ -29,12 +29,13 @@ recipeApp.service('recipeService',function(){
 });
 
 recipeApp.controller('yourRecipesController',['$scope','recipeService',function($scope,recipeService){
+  $scope.yourRecipes=[];
   $scope.init = function () {
     $scope.yourRecipes=recipeService.getRecipes();
     console.log($scope.yourRecipes);
+    $scope.recipes=$scope.yourRecipes;
   };
 }]);
-
 
 recipeApp.controller('recipeFormController',['$scope','$location','recipeService',function($scope,$location,recipeService){
   $scope.ingredients=[];
