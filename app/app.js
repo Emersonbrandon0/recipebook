@@ -11,13 +11,32 @@ recipeApp.config(['$routeProvider',function($routeProvider){
     })
     .when('/yourRecipes',{
       templateUrl:"views/yourRecipes.html",
+      controller:"yourRecipesController"
     })
     .otherwise({
       redirectTo:'/'
     });
 }]);
 
-recipeApp.controller('recipeFormController',['$scope','$location',function($scope,$location){
+recipeApp.service('recipeService',function(){
+  var recipes=[];
+  this.createRecipe=function(recipe){
+    recipes.push({recipe})
+  }
+  this.getRecipes=function(){
+    return recipes;
+  }
+});
+
+recipeApp.controller('yourRecipesController',['$scope','recipeService',function($scope,recipeService){
+  $scope.init = function () {
+    $scope.yourRecipes=recipeService.getRecipes();
+    console.log($scope.yourRecipes);
+  };
+}]);
+
+
+recipeApp.controller('recipeFormController',['$scope','$location','recipeService',function($scope,$location,recipeService){
   $scope.ingredients=[];
   $scope.addIngredient=function(ingredient){
     if(ingredient===undefined){
@@ -53,8 +72,7 @@ recipeApp.controller('recipeFormController',['$scope','$location',function($scop
       ingredients:$scope.ingredients,
       directions:$scope.directions
     });
-    alert($scope.recipeName)
-    console.log($scope.recipes);
+    recipeService.createRecipe($scope.recipes);
     $location.path('/yourRecipes');
   };
 
