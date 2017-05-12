@@ -70,6 +70,9 @@ input:-moz-placeholder { /* Firefox 18- */
 .yourRecipeLoops{
   font-weight: 100;
 }
+.yourRecipeName{
+  font-style: bold;
+}
 .theName{
   font-style: italic;
   font-weight: 700;

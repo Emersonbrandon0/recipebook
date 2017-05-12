@@ -1,6 +1,9 @@
 <h2 class="welcome" data-ng-init="init()">Here is a list of your recipes</h2>
 <div class="row">
-  <div class="col s12 m4" ng-repeat="recipe in recipes">
+  <input type="text" placeholder="Search for a Recipe..." ng-model="recipeSearch"/>
+</div>
+<div class="row">
+  <div class="col s12 m4" ng-repeat="recipe in recipes | filter:recipeSearch">
     <div class="recipeCards card-panel">
       <h5>
         <p class="theName flow-text">
