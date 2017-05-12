@@ -1,10 +1,24 @@
 <h2 class="welcome" data-ng-init="init()">Here is a list of your recipes</h2>
-<ul class="recipeCards">
-  <li ng-repeat="recipe in recipes">
-    Name:{{recipe.recipe[0].name}}
-    <br/>
-    Ingredients:{{recipe.recipe[0].ingredients}}
-    <br/>
-    Directions:{{recipe.recipe[0].directions}}
-  </li>
-</ul>
+<div class="row">
+  <div class="col s12 m4" ng-repeat="recipe in recipes">
+    <div class="recipeCards card-panel">
+      <h5>
+        <p class="theName flow-text">
+          {{recipe.recipe[0].name}}
+        </p>
+        <br/>
+        <p class="yourRecipeName">Ingredients:</p>
+        <p class="yourRecipeLoops flow-text" ng-repeat="i in recipe.recipe[0].ingredients">
+          -{{i.ingredient}}
+        </p>
+        <br/>
+        <p class="yourRecipeName">Directions:</p>
+        <p class="yourRecipeLoops flow-text" ng-repeat="i in recipe.recipe[0].directions">
+          -{{i.direction}}
+        </p>
+      </h5>
+    </div>
+  </div>
+
+
+</div>

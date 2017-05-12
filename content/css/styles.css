@@ -64,7 +64,13 @@ input:-ms-input-placeholder { /* IE 10+ */
 input:-moz-placeholder { /* Firefox 18- */
   color: #A8A8A8;
 }
-.recipeCards li {
-  font-size: 25px;
+.recipeCards .yourRecipeName {
   font-weight: 200;
+}
+.yourRecipeLoops{
+  font-weight: 100;
+}
+.theName{
+  font-style: italic;
+  font-weight: 700;
 }

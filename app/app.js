@@ -34,7 +34,16 @@ recipeApp.controller('yourRecipesController',['$scope','recipeService',function(
     $scope.yourRecipes=recipeService.getRecipes();
     console.log($scope.yourRecipes);
     $scope.recipes=$scope.yourRecipes;
+    $scope.checkRecipes($scope.yourRecipes);
   };
+  $scope.checkRecipes=function(recipes){
+    if(recipes===undefined){
+      return false;
+    } else {
+      return true;
+    }
+
+  }
 }]);
 
 recipeApp.controller('recipeFormController',['$scope','$location','recipeService',function($scope,$location,recipeService){
