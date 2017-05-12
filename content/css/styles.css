@@ -52,3 +52,19 @@ h3{
   font-style: italic;
   font-weight: 200;
 }
+input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #A8A8A8;
+}
+input::-moz-placeholder { /* Firefox 19+ */
+  color: #A8A8A8;
+}
+input:-ms-input-placeholder { /* IE 10+ */
+  color: #A8A8A8;
+}
+input:-moz-placeholder { /* Firefox 18- */
+  color: #A8A8A8;
+}
+.recipeCards li {
+  font-size: 25px;
+  font-weight: 200;
+}
