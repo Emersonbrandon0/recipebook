@@ -28,7 +28,7 @@ recipeApp.service('recipeService',function(){
   }
 });
 
-  recipeApp.controller('yourRecipesController',['$scope','recipeService',function($scope,recipeService){
+recipeApp.controller('yourRecipesController',['$scope','recipeService',function($scope,recipeService){
   $scope.yourRecipes=[];
   $scope.init = function () {
     $scope.yourRecipes=recipeService.getRecipes();

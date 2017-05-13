@@ -13,7 +13,7 @@ body{
   font-weight: 200;
   font-size: 35px;
   padding: 0px 20px 0px 20px;
-  border-radius: 6px;
+  border-radius: 100px;
   border: 1px solid white;
   margin-bottom: 40px;
 }
@@ -69,20 +69,21 @@ input:-moz-placeholder { /* Firefox 18- */
   font-weight: 700;
 }
 .homePageHeader{
-  text-align: left;
+  text-align: right;
   font-weight: 700;
   font-size: 90px;
   margin-bottom:0px;
   text-transform: uppercase;
 }
 .homePageTagline{
+  text-align: right;
   font-weight: 100;
   font-size: 50px;
 }
 .header li{
   display: inline;
   text-transform: lowercase;
-  font-size: 18px;
+  font-size: 24px;
   padding-right: 22px;
 }
 .header{
@@ -95,4 +96,19 @@ input:-moz-placeholder { /* Firefox 18- */
 }
 .recipeCards{
   color: black;
+}
+.button{
+  margin-top: 40px;
+  margin-right:20px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 200;
+  font-size: 35px;
+  padding: 0px 2px 0px 2px;
+  border-radius: 100px;
+  border: 1px solid white;
+}
+#signUpButton{
+  background-color: white;
+  color:#ff4e50;
 }
