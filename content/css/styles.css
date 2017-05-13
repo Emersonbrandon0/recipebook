@@ -2,17 +2,19 @@
   padding: 0px;
   margin:0px;
 }
+body{
+  background-color: #ff4e50;
+  color: white;
+}
 .add{
   float: right;
-  background: #fff;
   text-align: center;
-  color: crimson;
   cursor: pointer;
   font-weight: 200;
   font-size: 35px;
   padding: 0px 20px 0px 20px;
   border-radius: 6px;
-  border: 1px solid crimson;
+  border: 1px solid white;
   margin-bottom: 40px;
 }
 h3{
@@ -25,18 +27,7 @@ h3{
 }
 
 .container{
-  width: 60% !important;
-}
-#menu-bar{
-  background: crimson;
-  color: #fff;
-  padding: 20px;
-}
-#menu-bar a{
-  float: right;
-  list-style-type: none;
-  padding: 20px;
-  color: #fff;
+  width: 80% !important;
 }
 .directionsArea{
   margin-bottom: 100px;
@@ -53,16 +44,16 @@ h3{
   font-weight: 200;
 }
 input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: #A8A8A8;
+  color: white;
 }
 input::-moz-placeholder { /* Firefox 19+ */
-  color: #A8A8A8;
+  color: white;
 }
 input:-ms-input-placeholder { /* IE 10+ */
-  color: #A8A8A8;
+  color: white;
 }
 input:-moz-placeholder { /* Firefox 18- */
-  color: #A8A8A8;
+  color: white;
 }
 .recipeCards .yourRecipeName {
   font-weight: 200;
@@ -76,4 +67,32 @@ input:-moz-placeholder { /* Firefox 18- */
 .theName{
   font-style: italic;
   font-weight: 700;
+}
+.homePageHeader{
+  text-align: left;
+  font-weight: 700;
+  font-size: 90px;
+  margin-bottom:0px;
+  text-transform: uppercase;
+}
+.homePageTagline{
+  font-weight: 100;
+  font-size: 50px;
+}
+.header li{
+  display: inline;
+  text-transform: lowercase;
+  font-size: 18px;
+  padding-right: 22px;
+}
+.header{
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.header a{
+  font-weight: 100;
+  color: white;
+}
+.recipeCards{
+  color: black;
 }

@@ -1,4 +1,4 @@
-<h2 class="welcome" data-ng-init="init()">Here is a list of your recipes</h2>
+<h2 class="welcome" data-ng-init="init()">Here's a List of All of Your recipes</h2>
 <div class="row">
   <input type="text" placeholder="Search for a Recipe..." ng-model="recipeSearch"/>
 </div>
@@ -12,12 +12,12 @@
         <br/>
         <p class="yourRecipeName">Ingredients:</p>
         <p class="yourRecipeLoops flow-text" ng-repeat="i in recipe.recipe[0].ingredients">
-          -{{i.ingredient}}
+          &nbsp;&nbsp;&nbsp;&nbsp;-{{i.ingredient}}
         </p>
         <br/>
         <p class="yourRecipeName">Directions:</p>
         <p class="yourRecipeLoops flow-text" ng-repeat="i in recipe.recipe[0].directions">
-          -{{i.direction}}
+          &nbsp;&nbsp;&nbsp;&nbsp;-{{i.direction}}
         </p>
       </h5>
     </div>
