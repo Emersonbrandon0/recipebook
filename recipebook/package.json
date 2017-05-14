@@ -6,12 +6,23 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "~1.16.0",
+    "connect-flash": "*",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.0",
     "express": "~4.14.1",
+    "express-messages": "*",
+    "express-session": "*",
+    "express-validator": "*",
     "jade": "~1.11.0",
+    "mongodb": "*",
+    "mongoose": "*",
     "morgan": "~1.7.0",
+    "multer": "*",
+    "passport": "*",
+    "passport-http": "*",
+    "passport-local": "*",
     "serve-favicon": "~2.3.2"
   }
 }

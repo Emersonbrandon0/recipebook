@@ -112,3 +112,26 @@ input:-moz-placeholder { /* Firefox 18- */
   background-color: white;
   color:#ff4e50;
 }
+#signUpButton a {
+  color:#ff4e50; 
+}
+.registerHeadline{
+  font-weight: 700;
+  font-size: 90px;
+}
+.registerTagline{
+  font-weight: 100;
+}
+.input-field input + label {
+   color: white !important;
+}
+
+.row .input-field input {
+   border-bottom: 1px solid white !important;
+   box-shadow: 0 1px 0 0 white !important
+}
+
+.textInput{
+  border-bottom: 1px solid white !important;
+  box-shadow: 0 1px 0 0 white !important
+}

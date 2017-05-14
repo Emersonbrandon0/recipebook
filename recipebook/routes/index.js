@@ -7,4 +7,8 @@ router.get('/', function(req, res, next) {
   res.sendFile(path.join(__dirname, '../','views','index.html'));
 });
 
+router.get('/register',function(req, res, next){
+  res.render('register',{title:'Register'})
+});
+
 module.exports = router;

@@ -1,0 +1,23 @@
+extends layout
+
+block content
+	h1.registerHeadline REGISTER
+	h3.registerTagline Please register using the form below
+	.row
+		form.col.s12
+			.row
+				.input-field.col.s2
+					input.validate(type='text', placeholder="First Name")
+				.input-field.col.s3
+					input.validate(type='text',placeholder="Last Name")
+				.input-field.col.s7
+					input.validate(type='email', placeholder="Email")
+			.row
+				.input-field.col.s12
+					input.validate(type='text', placeholder="Username")
+			.row
+				.input-field.col.s6
+					input.validate(type='password', placeholder="Password")
+				.input-field.col.s6
+					input.validate(type='password', placeholder="Confirm Password")
+			

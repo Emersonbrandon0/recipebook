@@ -7,11 +7,11 @@
   </div>
   <h3>What's Cooking Good Looking?</h3>
   <form>
-    <input type="text" placeholder="Name of Your Recipe..." ng-model="recipeName" ng-keydown="hideHeader()"/>
+    <input class="textInput" type="text" placeholder="Name of Your Recipe..." ng-model="recipeName" ng-keydown="hideHeader()"/>
   </form>
   <h3>What's in it?</h3>
   <form ng-submit='addIngredient(ingredient)'>
-    <input type="text" placeholder="Add an Ingredient..." ng-model="ingredient"/>
+    <input class="textInput" type="text" placeholder="Add an Ingredient..." ng-model="ingredient"/>
     <div class="add" ng-click='addIngredient(ingredient)'>Click to add an ingredient</div>
   </form>
   <h3>Ingredients:</h3>
@@ -21,7 +21,7 @@
   <br/>
   <h3>Wow, Tell us How You Made that!</h3>
   <form ng-submit="addDirection(direction)">
-    <input type="text" placeholder="Baby Steps, Please..." ng-model="direction"/>
+    <input class="textInput" type="text" placeholder="Baby Steps, Please..." ng-model="direction"/>
     <div class="add" ng-click='addDirection(direction)'>Click to add another step to your recipe</div>
   </form>
   <div class="directionsArea">
