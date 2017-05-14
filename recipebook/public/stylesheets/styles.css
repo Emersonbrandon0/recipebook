@@ -115,6 +115,10 @@ input:-moz-placeholder { /* Firefox 18- */
 #signUpButton a {
   color:#ff4e50; 
 }
+#loginButton {
+  color:white; 
+}
+
 .registerHeadline{
   font-weight: 700;
   font-size: 90px;
@@ -134,4 +138,12 @@ input:-moz-placeholder { /* Firefox 18- */
 .textInput{
   border-bottom: 1px solid white !important;
   box-shadow: 0 1px 0 0 white !important
+}
+
+.btn{
+  font-weight: 200 !important;
+  font-size: 35px !important;
+  border-radius: 100px !important;
+  border: 1px solid white !important;
+  background-color: #ff4e50 !important; 
 }
