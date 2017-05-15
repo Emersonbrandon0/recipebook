@@ -91,24 +91,23 @@ router.post('/register', multer({ dest: './uploads/'}).single('upl'), function(r
 });
 
 passport.use(new LocalStrategy(
-function(username, password, done) {
-     User.getUserByUsername(username, function (err, user) {
-          if (err) { return done(err); }
-          if (!user) {
+	function(username, password, done) {
+     	User.getUserByUsername(username, function (err, user) {
+          	if (err) { return done(err);}
+          	if (!user) {
                return done(null, false, { message: 'Incorrect username.' });
-          }
-          User.comparePassword(password,user.password,function(err,isMatch){
-          	if (err) {return done(err);}
-          	if (isMatch) {
-          		return done(null,user);
-          	} else{
-          		console.log('Invalid password');
-          		return done(null,false, {message: 'Invalid password.'});
           	}
-          });
-       });
+          	User.comparePassword(password,user.password,function(err,isMatch){
+          		if (err) {return done(err);}
+          		if (isMatch) {
+          			return done(null,user);
+          		} else{
+          			console.log('Invalid password');
+          			return done(null,false, {message: 'Invalid password.'});
+          		}
+          	});
+       	});
     }
-
 ));
 
 passport.serializeUser(function(user, done) {
@@ -120,5 +119,13 @@ passport.deserializeUser(function(user, done) {
 });
 
 
+router.post('/login', passport.authenticate('local', {
+     successRedirect: '/',
+     failureRedirect: '/login'
+}),function(req,res,next){
+	console.log('Authentication succesful\n');
+    req.flash('success','You are logged in');
+    res.redirect('/');
+}); 
 
 module.exports = router;

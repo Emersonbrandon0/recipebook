@@ -3,14 +3,13 @@ extends layout
 block content
 	h1.registerHeadline LOGIN
 	.row
-		form.col.s12
+		form(method="post",action="/login").col.s12
 			.row
 				.input-field.col.s12
-					input.validate(type='text', placeholder="Username")
+					input.validate(name='username',type='text', placeholder="Username")
 			.row
 				.input-field.col.s12
-					input.validate(type='password', placeholder="Password")
+					input.validate(name='password',type='password', placeholder="Password")
 			.row
-				button.btn.waves-effect.waves-light(type='submit', name='action')
+				button.btn.waves-effect.waves-light(type='submit', name='action', value="Login")
 					| Login
-			
